@@ -63,15 +63,15 @@ var image = 0;
                     // although it would be possible to append all of these to a new div if necessary
 
                         //name
-                        $('#return').append("<b>"+response.events[i].performers[j].name+"</b><br>");
-                        //type
-                        $('#return').append("<b>"+response.events[i].type+"</b><br>");
-                        //date and time
-                        $('#return').append("<b>"+response.events[i].datetime_local+"</b><br>");
-                        //address
-                        $('#return').append("<b>"+response.events[i].venue.address+" "+response.events[i].venue.extended_address+"</b><br>");
-                        //url
-                        $('#return').append("<a href='"+response.events[i].url+"' target='_blank'>Here's a link to the event page!</a><br>");
+            
+                        // //type
+                        // $('#return').append("");
+                        // //date and time
+                        // $('#return').append("");
+                        // //address
+                        // $('#return').append("");
+                        // //url
+                        // $('#return').append("");
 
                         //sets placeholder image
                         if (response.events[i].type === 'concert')
@@ -96,12 +96,12 @@ var image = 0;
         			if (response.events[i].performers[j].image===null)
         			{
                         //placeholder image
-        				$('#return').append("<img src='"+images[image]+"'><br><br>");
+        				$('#return').append("<div class='one'><div class='left'><b>"+response.events[i].performers[j].name+"</b><br><b>"+response.events[i].type+"</b><br><b>"+response.events[i].datetime_local+"</b><br><b>"+response.events[i].venue.address+" "+response.events[i].venue.extended_address+"</b><br><a href='"+response.events[i].url+"' target='_blank'>Here's a link to the event page!</a></div><div class='right'><img src='"+images[image]+"'><br><br></div></div>");
         			}
         			else
         			{
                         //performer image
-        				$('#return').append("<img src='"+response.events[i].performers[j].image+"'><br><br><br>");
+        				$('#return').append("<div class='one'><div class='left'><b>"+response.events[i].performers[j].name+"</b><br><b>"+response.events[i].type+"</b><br><b>"+response.events[i].datetime_local+"</b><br><b>"+response.events[i].venue.address+" "+response.events[i].venue.extended_address+"</b><br><a href='"+response.events[i].url+"' target='_blank'>Here's a link to the event page!</a></div><div class='right'><img src='"+response.events[i].performers[j].image+"'><br><br><br></div></div>");
         			}
         		}
         	}
@@ -113,6 +113,7 @@ var image = 0;
       
 
 });
+
 
 
 });

@@ -1,0 +1,33 @@
+*{
+	box-sizing: border-box;
+}
+
+.btn-primary{
+	
+	height: 100px;
+	width: 200px;
+	margin: 20px;
+	font-size: 36px;
+	text-align: center;
+
+}
+
+#return{
+	
+	display: inline-block;
+	float:left;
+
+}
+
+.one{
+	
+	display: inline-block;
+	float:left;
+	margin:10px;
+	border-style:solid;
+	background color:darkgrey;
+	border-width: 2px;
+	padding:5px;
+	border-color: orange;
+}
+
